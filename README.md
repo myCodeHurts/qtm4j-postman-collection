@@ -1,6 +1,6 @@
 # qtm4j-postman-collection
 
-Postman Collection to try out QMetry for JIRA Automation API. 
+Postman Collection contains HTTP requests for uploading test result file on JIRA instance using [QMetry for JIRA - Test Management](https://marketplace.atlassian.com/plugins/com.infostretch.QmetryTestManager/cloud/overview).
 
 
 ### JIRA Cloud
