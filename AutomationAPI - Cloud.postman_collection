@@ -1,0 +1,69 @@
+{
+	"id": "ff4d2d71-57cc-5470-5d9a-918afa553cff",
+	"name": "AutomationAPI - Cloud",
+	"description": "Import test result is 2 step process\n1. Get upload URL\n2. Upload file",
+	"order": [
+		"5ff66abe-2718-3133-6dd5-78090c3095e4",
+		"5bf8e483-60db-70f9-ce3a-0ddddc167102"
+	],
+	"folders": [],
+	"folders_order": [],
+	"timestamp": 1500681955357,
+	"owner": "1556119",
+	"public": false,
+	"requests": [
+		{
+			"id": "5bf8e483-60db-70f9-ce3a-0ddddc167102",
+			"headers": "Content-Type: multipart/form-data\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "multipart/form-data",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{awsurl}}",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "PUT",
+			"data": [],
+			"dataMode": "binary",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1504126417955,
+			"name": "Upload file",
+			"description": "",
+			"collectionId": "ff4d2d71-57cc-5470-5d9a-918afa553cff",
+			"responses": [],
+			"rawModeData": ""
+		},
+		{
+			"id": "5ff66abe-2718-3133-6dd5-78090c3095e4",
+			"headers": "",
+			"headerData": [],
+			"url": "https://importresults.qmetry.com/prod/importresults-qtm4j",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"tests": "var jsonData = JSON.parse(responseBody);\npostman.setEnvironmentVariable(\"awsurl\", jsonData.url);",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1500917040575,
+			"name": "Get upload file URL",
+			"description": "",
+			"collectionId": "ff4d2d71-57cc-5470-5d9a-918afa553cff",
+			"responses": [],
+			"rawModeData": "{\n\t\"apiKey\": \"5a279c7273de0ef2496ecef4e7b41e95ff2114d797704a4682a71bc89bbe667a\",\n\t\"format\": \"junit/xml\",\n\t\"testRunName\": \"First Test Run\"\n}\n\t\t\t\t",
+			"collection_id": "ff4d2d71-57cc-5470-5d9a-918afa553cff"
+		}
+	]
+}
